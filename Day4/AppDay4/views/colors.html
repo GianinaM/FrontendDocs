@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <title>Colors</title>
+</head>
+<body>
+<div>
+    <h1><p class="alert-danger"><b>Colors</b></p></h1>
+    <div class="row">
+        <div class="col-md-6">
+            <select ng-model="myColor" ng-options="color.text for color in colors" ng-change="changeColor()"></select>
+        </div>
+        <div class="col-md-6">
+            <select ng-model="myColor" ng-change="changeColor()" ng-options="color.text group by color.type for color in colors"></select>
+        </div>
+    </div>
+
+    <div>
+        <h1><span ng-class="selectedColor.class">Some Text</span></h1>
+    </div>
+
+</div>
+</body>
+</html>

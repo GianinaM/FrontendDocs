@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+</head>
+<body>
+<ng-form name="myForm" ng-controller="FormController" class="my-form">
+    userType: <input name="input" ng-model="userType" required>
+    <span class="text-danger" ng-show="myForm.input.$error.required">* Required!</span><br>
+    userType = {{userType}}<br>
+    <br>
+    <button class="btn btn-primary btn-lg" role="button" ng-click="submitForm()"> Submit </button>
+    <h4>Cele 6 :-o </h4>
+    myForm.input.$valid = {{myForm.input.$valid}}<br>
+    myForm.input.$invalid = {{myForm.input.$invalid}}<br>
+    myForm.input.$pristine = {{myForm.input.$pristine}}<br>
+    myForm.input.$dirty = {{myForm.input.$dirty}}<br>
+    myForm.input.$submitted = {{myForm.input.$submitted}}<br>
+    myForm.input.$error = {{myForm.input.$error}}<br>
+    <br>
+    myForm.$error.required = {{!!myForm.$error.required}}<br>
+    <br>
+    <span class="text-success" ng-show="myForm.$submitted"> Submitted! </span><br>
+</ng-form>
+
+</body>
+</html>

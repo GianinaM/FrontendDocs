@@ -10,7 +10,7 @@ hrApp.controller('UserController', ['$scope', '$http', '$location', 'UserService
               email: '',
               id: ''
             };
-
+        $scope.saved = false;
         $scope.users = [];
 
         $scope.back = function () {
@@ -24,20 +24,20 @@ hrApp.controller('UserController', ['$scope', '$http', '$location', 'UserService
                 email: '',
                 id: ''
             };
+            $scope.saved = false;
         };
 
         $scope.save = function () {
             UserService.save($scope.user);
+            $scope.saved = true;
         };
 
-        $scope.show = function () {
+        $scope.show = function (userList) {
             $scope.users = UserService.getUsers();
-            if ($scope.usersList == true) {
-                $scope.usersList = false;
-            } else {
-                $scope.usersList = true;
-            }
+            $scope.usersList = !$scope.usersList;
         }
+
+
 
 
     }]);

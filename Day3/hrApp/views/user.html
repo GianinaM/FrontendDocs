@@ -1,30 +1,37 @@
 <div class="panel panel-default">
+    <div class="alert alert-success" role="alert"  ng-show="saved">
+        <a href="#" class="alert-link"><b>User created</b></a>
+    </div>
     <div class="panel-heading">
         <h2 class="panel-title"> <b> Add User </b> </h2>
     </div>
     <div class="panel-body">
 
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-group">
-                    First Name: <input type="text" ng-model="user.firstName">
+                    <div class="col-md-2"> First Name: </div>
+                    <div class="col-md-6"><input type="text" ng-model="user.firstName"></div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-group">
-                    Last Name: <input type="text" ng-model="user.lastName">
+                    <div class="col-lg-2"> First Name: </div>
+                    <div class="col-lg-6"><input type="text" ng-model="user.lastName"></div>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-group">
-                    Email: <input type="text" ng-model="user.email">
+                    <div class="col-lg-2">Email:</div>
+                    <div class="col-lg-6"><input type="text" ng-model="user.email"></div>
                 </div>
             </div>
-            <div class="col-lg-6">
+            <div class="col-lg-12">
                 <div class="form-group">
-                    CNP: <input type="text" ng-model="user.id">
+                    <div class="col-lg-2">CNP:</div>
+                    <div class="col-lg-6"><input type="text" ng-model="user.id"></div>
                 </div>
             </div>
         </div>
