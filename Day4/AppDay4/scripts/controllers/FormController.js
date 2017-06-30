@@ -5,9 +5,10 @@ hrApp.controller('FormController', ['$scope', function($scope) {
     $scope.userType = '';
     $scope.myForm = {};
     $scope.submitForm = function() {
-        if ($scope.myForm.$error.required == false) {
-            $scope.myForm.input.$submitted = true;
-            console.log($scope.myForm.input.$submitted);
+        console.log($scope.myForm.input.$valid);
+
+        if ($scope.myForm.input.$valid == true) {
+            $scope.myForm.$submitted = true;
         }
     }
 }]);
